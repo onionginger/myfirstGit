@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { Login } from './components/login/login';
 import { Home } from './components/home/home';
 import { Register } from './components/register/register'
-import { ChatInterface } from './components/chat-interface/chat-interface'
+import { Chat} from './components/chat/chat'
 
 export const routes: Routes = [
 
@@ -17,8 +17,8 @@ export const routes: Routes = [
     component: Register 
   },
 
-  {path: 'cool-chat-window',
-  component: ChatInterface
+  {path: 'cool-chat',
+  component: Chat
   }
 ];
 

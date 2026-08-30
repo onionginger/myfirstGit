@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Socket } from '../socket'
+import { Socket } from '../../socket'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 

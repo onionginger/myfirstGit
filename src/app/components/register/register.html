@@ -1,11 +1,13 @@
-<p>register works!</p>
-<p>login works!</p>
+<div class="login">
 <form>
+    <input type="file" id="profileImg" name="profileImg" ><br>
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" [(ngModel)]="username"><br>
     <label for="email">Email:</label>
     <input type="text" id="email" name="email" [(ngModel)]="email"><br>
     <label for="password">Password:</label>
-    <input type="text" id="password" name="password" [(ngModel)]="password"><br> 
-    <button (click)="Buttonclick()">Submit</button>
+    <input type="password" pattern=".{8,}" id="password" name="password" [(ngModel)]="password"><br> 
+    <button (click)="save()">Submit</button>
 </form>
+<button (click)="gohome()">Submit</button>
+</div>

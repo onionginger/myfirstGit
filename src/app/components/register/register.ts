@@ -11,7 +11,14 @@ export class Register {
     username="";
     password="";
     email="";
-    Buttonclick() {
-    alert("clickerd");
+
+    save() {
+    let item = { id: this.email };
+    localStorage.setItem('session id', JSON.stringify(item))
+
+  }
+
+  gohome() {
+    
   }
 }

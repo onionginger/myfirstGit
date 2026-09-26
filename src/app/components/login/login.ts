@@ -8,13 +8,29 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login.html',
 })
 export class Login {
-  
-  isLoggedin = false;
-  username="";
-  password="";
-  
-  Buttonclick() {
-    alert(this.username + ":" + this.password)
-  }
 
+  loginObj:any = {
+    
+
+
+  }
+  
+  checkExists() {
+ 
+    alert(this.username + ":" + this.password)       
+    }
+
+
+  password="";
+  email="";
+  username="";
+
+  count = 0;
+  submitted = false;
+
+  saveData() {
+    let data = { id: 10, name:'zyz'};
+
+    localStorage.setItem('session', JSON.stringify(data))
+  }
 }

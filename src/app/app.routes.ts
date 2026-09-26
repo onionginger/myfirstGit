@@ -2,24 +2,31 @@ import { Routes } from '@angular/router';
 import { Login } from './components/login/login';
 import { Home } from './components/home/home';
 import { Register } from './components/register/register'
-import { Chat} from './components/chat/chat'
+import { Profile } from './components/profile/profile';
+
+let dummydata = [
+  {name:"batman", email:"bruce@waynemansion.gt", password:"imasadorphan"}
+]
 
 export const routes: Routes = [
 
   {path: 'login', 
   component: Login},
   
-  {path: '',
-    component: Home
+  {path: 'profile',
+    component: Profile
   },
 
   {path: 'register',
     component: Register 
   },
 
-  {path: 'cool-chat',
-  component: Chat
-  }
+  {
+    path:'edit',
+    component: Profile,
+  },
+  {path:'',redirectTo:'login', pathMatch: 'full' }
+
 ];
 
 export class User {

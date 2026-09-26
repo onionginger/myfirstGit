@@ -1,9 +1,11 @@
-<p>login works!</p>
 <form>
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" [(ngModel)]="username"><br>
+    <input type="text" id="username" name="username" placeholder="Username..."[(ngModel)t]="username"><br>
     <label for="password">Password:</label>
-    <input type="text" id="password" name="password" [(ngModel)]="password"><br> 
-    <button (click)="Buttonclick()">Submit</button>
+    <input type="text" id="password" name="password" placeholder="Password..."[(ngModel)]="password" required><br> 
+    <button (click)="checkExists()">Submit</button>
 </form>
 <a href="../register/">Not an existing user?</a>
+<button (click)="count = count + 1">count {{ count }} times</button>
+
+<button (click)="saveData()">save data</button>

@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { rxResource } from '@angular/core/rxjs-interop';
+import { Authenticator } from '../../services/authenticator/authenticator'
 
 @Component({
   imports: [FormsModule],
@@ -7,30 +11,45 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.css',
   templateUrl: './login.html',
 })
-export class Login {
+export class Login implements OnInit{
 
-  loginObj:any = {
+  constructor() {};
+
+  ngOnInit(): void {
     
-
-
   }
-  
-  checkExists() {
- 
-    alert(this.username + ":" + this.password)       
+
+  isLogin = false;
+  LoginValid = false;
+
+  switchModes() {
+    this.isLogin = !this.isLogin;
+    console.log("switch")
+  }
+
+  onSubmit() {
+    if (this.isLogin) {
+
     }
+    else {
 
+    }
+  }
 
-  password="";
-  email="";
-  username="";
-
-  count = 0;
-  submitted = false;
-
-  saveData() {
+  saveLogin() {
     let data = { id: 10, name:'zyz'};
 
     localStorage.setItem('session', JSON.stringify(data))
+  }
+
+  storeUser() {
+
+  }
+
+
+
+  login:any = {
+    email: "",
+
   }
 }

@@ -1,18 +1,18 @@
 html {
     background-color: bisque;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.login {
-    border-radius: 10px;
-    opacity: 70%;
-    background-color: aqua;
-    padding: 20px;
-}
 
-input label input {
+input {
+    border-color: 2px aliceblue;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     padding: 10px;
 }
 
+button {
+    border: #949599;
+}
